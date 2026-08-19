@@ -1,0 +1,6 @@
+beautifulsoup4>=4.12
+pdfplumber>=0.11
+PyMuPDF>=1.24
+PyYAML>=6.0
+requests>=2.31
+tqdm>=4.66

@@ -1,0 +1,24 @@
+# Paper Mining Configuration
+
+download:
+  output_dir: "data/papers"
+  request_delay: 3.0
+  discovery_sources:
+    - arxiv
+    - semantic_scholar
+  download_priority:
+    - arxiv
+    - direct
+    - semantic_scholar
+    - scholarly
+  user_agent: "PaperMining/0.1 (mailto:research@example.com)"
+
+parsing:
+  output_dir: "data/parsed"
+  engine: "hybrid"
+  output_format: "json"
+
+direct:
+  # null: use built-in/env candidates; []: disable Gateway
+  sources: null
+  proxy: null

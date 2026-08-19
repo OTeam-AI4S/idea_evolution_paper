@@ -1,0 +1,34 @@
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.env
+.DS_Store
+
+# Downloaded papers, parsed records, caches, and scheduler output
+data/
+discovery/
+shards/
+logs/
+reference_context_canary_*/
+*.pdf
+*.src
+*.part
+*.jsonl
+all_papers_cache*.json
+bulk_progress.json
+bulk_download.log
+publication_metadata_cache.jsonl
+reference_abstract_cache.jsonl
+
+# Credentials
+*api_key*
+*.pem
+*.key

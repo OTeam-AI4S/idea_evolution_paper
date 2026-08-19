@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "idea-evolution-paper"
+version = "0.1.0"
+description = "Large-scale scholarly paper download and structured citation-context extraction pipeline"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "beautifulsoup4>=4.12",
+  "pdfplumber>=0.11",
+  "PyMuPDF>=1.24",
+  "PyYAML>=6.0",
+  "requests>=2.31",
+  "tqdm>=4.66",
+]
+
+[project.scripts]
+idea-evolution-paper = "paper_mining.bulk_download:main"
+
+[tool.setuptools]
+package-dir = {"" = "runtime"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["runtime"]
+
+[tool.setuptools.package-data]
+paper_mining = ["config.yaml"]
